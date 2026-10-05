@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student FAQ</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef2ff;
+            padding: 30px;
+        }
+
+        .faq-box {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #9995;
+        }
+
+        h2 {
+            text-align: center;
+            color: #4f46e5;
+        }
+
+        .question {
+            background: #f1f5f9;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .answer {
+            display: none;
+            padding: 12px;
+            background: #eef2ff;
+            border-radius: 0 0 8px 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="faq-box">
+    <h2>🎓 Student FAQ</h2>
+
+    <div class="question">What are the college timings?</div>
+    <div class="answer">College timings are from 9:00 AM to 5:00 PM.</div>
+
+    <div class="question">How can I check my attendance?</div>
+    <div class="answer">You can check your attendance through the college portal.</div>
+
+    <div class="question">Where can I get study materials?</div>
+    <div class="answer">Study materials are available on the student portal.</div>
+
+    <div class="question">How can I contact the department?</div>
+    <div class="answer">You can contact the department office during working hours.</div>
+</div>
+
+<script>
+    let questions = document.querySelectorAll(".question");
+
+    questions.forEach(function(question) {
+        question.addEventListener("click", function() {
+
+            let answer = this.nextElementSibling;
+
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
